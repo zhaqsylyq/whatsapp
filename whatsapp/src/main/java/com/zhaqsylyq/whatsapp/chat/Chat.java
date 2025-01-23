@@ -28,7 +28,7 @@ import static jakarta.persistence.GenerationType.UUID;
 @NamedQuery(name = ChatConstants.FIND_CHAT_BY_SENDER_ID_AND_RECEIVER,
         query = "SELECT DISTINCT c FROM Chat c WHERE (c.sender.id = :senderId AND c.recipient.id = :recipientId) OR (c.sender.id = :recipientId AND c.recipient.id = :senderId) ORDER BY createdDate DESC"
 )
-public class Chat extends BaseAuditingEntity {
+public class  Chat extends BaseAuditingEntity {
     @Id
     @GeneratedValue(strategy = UUID)
     private String id;
